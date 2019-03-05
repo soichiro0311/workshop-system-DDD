@@ -1,5 +1,9 @@
 package workshop.domain.meeting.model;
-
+/**
+ * イベント内容のValueObject
+ * @author seike0311
+ *
+ */
 public class Content {
 
 	private String contentText;

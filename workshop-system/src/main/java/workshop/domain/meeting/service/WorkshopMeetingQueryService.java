@@ -4,6 +4,11 @@ import workshop.domain.meeting.infrastrcture.WorkshopMeetingRepository;
 import workshop.domain.meeting.model.WorkshopMeeting;
 import workshop.domain.meeting.model.WorkshopMeetingId;
 
+/**
+ * 勉強会イベントのクエリドメインサービス
+ * @author seike0311
+ *
+ */
 public class WorkshopMeetingQueryService {
 
 	private WorkshopMeetingRepository repository;

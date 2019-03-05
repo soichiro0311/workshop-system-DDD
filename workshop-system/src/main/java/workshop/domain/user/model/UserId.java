@@ -1,5 +1,9 @@
 package workshop.domain.user.model;
-
+/**
+ * ユーザエンティティの一意な識別子のValueObject
+ * @author seike0311
+ *
+ */
 public class UserId {
 
 	private String id;

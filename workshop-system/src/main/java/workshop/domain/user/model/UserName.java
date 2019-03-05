@@ -1,5 +1,10 @@
 package workshop.domain.user.model;
 
+/**
+ * ユーザ名のValueObject
+ * @author seike0311
+ *
+ */
 public class UserName {
 
 	private String username;

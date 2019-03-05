@@ -12,7 +12,11 @@ import workshop.domain.meeting.model.WorkshopMeetingId;
 import workshop.domain.user.model.UserId;
 import workshop.domain.user.model.UserName;
 import workshop.domain.user.model.UserNumber;
-
+/**
+ * 勉強会イベントのコマンドドメインサービス
+ * @author seike0311
+ *
+ */
 public class WorkshopMeetingCommandService {
 
 	private WorkshopMeetingRepository repository;

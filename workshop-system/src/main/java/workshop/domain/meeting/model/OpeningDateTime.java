@@ -3,6 +3,11 @@ package workshop.domain.meeting.model;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * イベント開催日時のValueObject
+ * @author seike0311
+ *
+ */
 public class OpeningDateTime {
 
 	private LocalDateTime openingDateTime;

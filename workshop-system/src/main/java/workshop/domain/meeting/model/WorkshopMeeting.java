@@ -1,5 +1,10 @@
 package workshop.domain.meeting.model;
 
+/**
+ * 勉強会イベントのエンティティ
+ * @author seike0311
+ *
+ */
 public class WorkshopMeeting {
 
 	private WorkshopMeetingId meetingId;

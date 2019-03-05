@@ -1,5 +1,10 @@
 package workshop.domain.meeting.model;
 
+/**
+ * イベントタイトルのValueObject
+ * @author seike0311
+ *
+ */
 public class Title {
 	private String titleText;
 

@@ -2,6 +2,11 @@ package workshop.domain.meeting.model;
 
 import workshop.domain.user.model.UserId;
 
+/**
+ * 勉強会イベントの一意な識別子のValueObject
+ * @author seike0311
+ *
+ */
 public class WorkshopMeetingId {
 
 	private String id;

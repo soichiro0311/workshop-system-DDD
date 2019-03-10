@@ -11,12 +11,12 @@ import java.time.format.DateTimeFormatter;
 public class OpeningDateTime {
 
 	private LocalDateTime openingDateTime;
-
-	private OpeningDateTime(LocalDateTime openingDateTime) {
-		this.openingDateTime = openingDateTime;
+	
+	public static OpeningDateTime of(LocalDateTime openingDateTime) {
+		return new OpeningDateTime(openingDateTime);
 	}
 
-	public static OpeningDateTime of(String openingDateTime) {
+	public static OpeningDateTime yyyyMMddHHmmssFormatOf(String openingDateTime) {
 		DateTimeFormatter f = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
 		LocalDateTime dateTime = LocalDateTime.parse(openingDateTime, f);
 		return new OpeningDateTime(dateTime);
@@ -27,4 +27,7 @@ public class OpeningDateTime {
 		return openingDateTime.toString();
 	}
 
+	private OpeningDateTime(LocalDateTime openingDateTime) {
+		this.openingDateTime = openingDateTime;
+	}
 }

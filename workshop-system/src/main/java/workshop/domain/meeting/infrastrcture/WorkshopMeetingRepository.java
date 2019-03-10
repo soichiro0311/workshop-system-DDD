@@ -9,8 +9,8 @@ import workshop.domain.meeting.model.WorkshopMeeting;
  */
 public interface WorkshopMeetingRepository {
 
-	void save(WorkshopMeeting meeting);
+	public void save(WorkshopMeeting meeting);
 
-	WorkshopMeeting findById(String id);
+	public WorkshopMeeting findById(String id);
 
 }

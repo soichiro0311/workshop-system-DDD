@@ -12,11 +12,11 @@ public class CreatedDateTime {
 
 	private LocalDateTime createdDateTime;
 
-	public CreatedDateTime(LocalDateTime createdDateTime) {
-		this.createdDateTime = createdDateTime;
+	public static CreatedDateTime of(LocalDateTime createdDateTime) {
+		return new CreatedDateTime(createdDateTime);
 	}
 
-	public static CreatedDateTime of(String createdDateTime) {
+	public static CreatedDateTime yyyyMMddHHmmssFormatOf(String createdDateTime) {
 		DateTimeFormatter f = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
 		LocalDateTime dateTime = LocalDateTime.parse(createdDateTime, f);
 		return new CreatedDateTime(dateTime);
@@ -26,9 +26,8 @@ public class CreatedDateTime {
 	public String toString() {
 		return createdDateTime.toString();
 	}
-
-	public static CreatedDateTime of(LocalDateTime createdDateTime) {
-		return new CreatedDateTime(createdDateTime);
+	
+	private CreatedDateTime(LocalDateTime createdDateTime) {
+		this.createdDateTime = createdDateTime;
 	}
-
 }

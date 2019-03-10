@@ -12,8 +12,8 @@ public class UserId {
 		this.id=id;
 	}
 
-	public static UserId of(UserName userName,UserNumber userNumber) {
-		return new UserId(userName.name() + userNumber.number());
+	public static UserId of(UserName userName) {
+		return new UserId(userName.userNumber());
 	}
 
 	public String id() {

@@ -21,4 +21,8 @@ public class UserName {
 		return this.username;
 	}
 
+	public String userNumber() {
+		return this.username.replaceAll("[^0-9]","");
+	}
+
 }

@@ -11,10 +11,6 @@ public class WorkshopMeetingId {
 
 	private String id;
 
-	public WorkshopMeetingId(String id) {
-		this.id = id;
-	}
-
 	public static WorkshopMeetingId of(UserId createdUserId, Title title, OpeningDateTime openingDates) {
 		return new WorkshopMeetingId(createdUserId.id() + title.toString() + openingDates.toString());
 	}
@@ -38,6 +34,10 @@ public class WorkshopMeetingId {
 		int result = 1;
 		result = prime * result + ((this.id == null) ? 0 : this.id.hashCode());
 		return result;
+	}
+	
+	private WorkshopMeetingId(String id) {
+		this.id = id;
 	}
 
 }

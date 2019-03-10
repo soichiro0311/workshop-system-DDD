@@ -1,0 +1,49 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Workshop Meeting Register</title>
+<link rel="stylesheet" href="/css/bootstrap.css" />
+<script src="/js/jquery.js"></script>
+<script src="/js/bootstrap.js"></script>
+</head>
+<body class="bg-dark">
+	<nav class="navbar navbar-fixed-top navbar-light bg-light">Simplex Workshop System</nav>
+	<div class="container-fluid" style="padding-top:10px">
+		<div class="card">
+			<div class="card-header">勉強会登録フォーム</div>
+			<div class="card-body">
+				<form action="#" th:action="@{/workshop/meeting/register}"
+					th:object="${workshopMeetingForm}" method="post">
+					<!-- title -->
+					<div class="form-group">
+						<label class="control-label" for="title">タイトル<span
+							class="text-muted">(2 - 120)</span></label> <input type="text"
+							class="form-control" th:field="*{title}" />
+						<div th:if="${#fields.hasErrors('title')}" th:errors="*{title}"
+							class="help-block">error</div>
+					</div>
+					<!-- content -->
+					<div class="form-group">
+						<label class="control-label" for="content">勉強会内容<span
+							class="text-muted">(10 - 600)</span></label>
+						<textarea rows="3" cols="80" class="form-control"
+							th:field="*{content}"></textarea>
+						<div th:if="${#fields.hasErrors('content')}"
+							th:errors="*{content}" class="help-block">error</div>
+					</div>
+					<!-- opening datetime -->
+					<div class="form-group">
+						<label class="control-label" for="openingDateTime">開催日時<span
+							class="text-muted">(yyyy/mm/dd HH:mm)</span></label> <input
+							type="datetime" class="form-control"
+							th:field="*{openingDateTime}" placeholder="yyyy/mm/dd HH:mm" />
+						<div th:if="${#fields.hasErrors('openingDateTime')}"
+							th:errors="*{openingDateTime}" class="help-block">error</div>
+					</div>
+					<button class="btn btn-primary btn-lg btn-block" type="submit">イベント作成</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
